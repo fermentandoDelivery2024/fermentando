@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export const About = () => {
   return (
-    <div className="bg-secondary w-full py-[64px]">
-      <div className="max-w-[1080px] mx-auto w-full flex gap-[32px]">
-        <div className="w-[50%]">
+    <div className="bg-secondary w-full xl:py-[64px] pb-[64px]">
+      <div className="xl:max-w-[1080px] mx-auto w-full flex gap-[32px] flex-col-reverse xl:flex-row">
+        <div className="xl:w-[50%] px-[32px] xl:px-0">
           <div className="text-[white]">
-            <h2 className="text-[52px] font-bold font-mono">Sobre nós</h2>
-            <p className="text-[20px] mt-[16px]">
+            <h2 className="text-[32px] xl:text-[52px] font-bold font-mono">Sobre nós</h2>
+            <p className="text-[16px] xl:text-[20px] mt-[16px]">
               Bem-vindo à Fermentando Pizza Delivery, onde cada pizza é uma
               obra-prima cuidadosamente preparada pelo pizzaiolo Cleomir (Toco),
               com mais de 20 anos de experiência. Localizada em Indaial/SC,
@@ -20,8 +20,8 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className="min-w-[440px] h-[440px] bg-main rounded relative">
-          <div className="w-full h-full rounded overflow-hidden absolute top-[-20px] right-[-20px]">
+        <div className="w-full xl:w-auto xl:min-w-[440px] h-[440px] xl:bg-main rounded relative">
+          <div className="w-full h-full rounded overflow-hidden xl:absolute xl:top-[-20px] xl:right-[-20px]">
             <Image
               src="/health.jpeg"
               alt="pizza"

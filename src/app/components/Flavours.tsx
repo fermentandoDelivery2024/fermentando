@@ -17,7 +17,10 @@ const PizzaCard = ({
   src: string;
 }) => {
   return (
-    <div className={`bg-[${bg}] text-[${text}] rounded h-min mt-auto`}>
+    <div
+      className={`text-[${text}] rounded h-min mt-auto w-full sm:w-min mx-auto`}
+      style={{ background: bg }}
+    >
       <div>
         <div className="w-full min-w-[240px] h-[217px] relative rounded">
           <Image
@@ -50,9 +53,35 @@ const PizzaCard = ({
 
 export const Flavours = () => {
   return (
-    <div className="max-w-[1080px] mx-auto mt-[64px] flex gap-[65px] w-full">
-      <div className="w-[50%] flex gap-[32px]">
-        <div>
+    <div className="max-w-[1080px] mx-auto mt-[64px] flex flex-col-reverse xl:flex-row gap-[65px] w-full px-[32px]">
+      <div className="xl:hidden">
+        <p className="text-[16px] xl:text-[20px] xl:mt-[16px]">
+          Experimente as pizzas artesanais escolhidas pra você, feitas com
+          fermentação natural e ingredientes frescos de qualidade. Saboreie um
+          sabor único e complexo, enquanto desfruta de uma digestão leve e
+          fácil. Venha experimentar essa delícia!
+        </p>
+        <div className="mt-[32px] flex flex-col items-center gap-[32px] w-full">
+          <button className="w-[80%]">
+            <Link
+              className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
+              href="#"
+            >
+              Cardápio Online
+            </Link>
+          </button>
+          <button className="w-[80%]">
+            <Link
+              className="bg-[transparent] text-text p-[16px] flex gap-[16px] rounded justify-center border-text border-solid border-[1px]"
+              href="#"
+            >
+              Nos chame pelo Whatsapp
+            </Link>
+          </button>
+        </div>
+      </div>
+      <div className="w-full xl:w-[50%] flex gap-[32px] flex-col xl:flex-row justify-center">
+        <div className="mr-[60px] sm:mr-0 mb-[-60px] xl:mb-0">
           <PizzaCard
             src="/calabresa.jpeg"
             title="Calabresa"
@@ -61,7 +90,7 @@ export const Flavours = () => {
             price="59,99"
             igredients={["Calabresa", "Queijo"]}
           />
-          <div className="w-[143px] h-[112px] relative mt-[32px] ml-auto rotate-180">
+          <div className="w-[143px] h-[112px] relative mt-[32px] ml-auto rotate-180 hidden xl:inline-block">
             <Image
               src="/detalhe-bolinhas.png"
               alt="bolinhas"
@@ -70,41 +99,47 @@ export const Flavours = () => {
             />
           </div>
         </div>
-        <PizzaCard
-          src="/onlineMenu.jpg"
-          title="Carnaxide"
-          text="#3A1C36"
-          bg="white"
-          price="59,99"
-          igredients={["Carne", "Queijo"]}
-        />
+        <div className="ml-[60px] md:ml-[128px] xl:ml-0 flex">
+          <PizzaCard
+            src="/onlineMenu.jpg"
+            title="Carnaxide"
+            text="#3A1C36"
+            bg="white"
+            price="59,99"
+            igredients={["Carne", "Queijo"]}
+          />
+        </div>
       </div>
-      <div className="w-[50%]">
+      <div className="w-full xl:w-[50%]">
         <div className="text-text">
-          <h2 className="text-[52px] font-bold font-mono">Escolhas da casa</h2>
-          <p className="text-[20px] mt-[16px]">
-            Experimente as pizzas artesanais escolhidas pra você, feitas com
-            fermentação natural e ingredientes frescos de qualidade. Saboreie um
-            sabor único e complexo, enquanto desfruta de uma digestão leve e
-            fácil. Venha experimentar essa delícia!
-          </p>
-          <div className="mt-[32px] flex gap-[32px]">
-            <button className="w-[50%]">
-              <Link
-                className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
-                href="#"
-              >
-                Cardápio Online
-              </Link>
-            </button>
-            <button className="w-[50%]">
-              <Link
-                className="bg-[transparent] text-text p-[16px] flex gap-[16px] rounded justify-center border-text border-solid border-[1px]"
-                href="#"
-              >
-                Nos chame pelo Whatsapp
-              </Link>
-            </button>
+          <h2 className="text-[32px] xl:text-[52px] font-bold font-mono text-center xl:text-left">
+            Escolhas da casa
+          </h2>
+          <div className="hidden xl:inline">
+            <p className="text-[20px] mt-[16px]">
+              Experimente as pizzas artesanais escolhidas pra você, feitas com
+              fermentação natural e ingredientes frescos de qualidade. Saboreie
+              um sabor único e complexo, enquanto desfruta de uma digestão leve
+              e fácil. Venha experimentar essa delícia!
+            </p>
+            <div className="mt-[32px] flex gap-[32px]">
+              <button className="w-[50%]">
+                <Link
+                  className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
+                  href="#"
+                >
+                  Cardápio Online
+                </Link>
+              </button>
+              <button className="w-[50%]">
+                <Link
+                  className="bg-[transparent] text-text p-[16px] flex gap-[16px] rounded justify-center border-text border-solid border-[1px]"
+                  href="#"
+                >
+                  Nos chame pelo Whatsapp
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
       </div>

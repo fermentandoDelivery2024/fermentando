@@ -46,7 +46,7 @@ export const Hero = () => {
           <div className="w-[12px] h-[12px] rounded-full bg-[#008037]" />
         </div>
       </div>
-      <div className="min-w-[510px] w-full h-[360px] xl:h-[500px] bg-[#9e9e9e] rounded relative overflow-hidden">
+      <div className="xl:min-w-[510px] w-full h-[360px] xl:h-[500px] bg-[#9e9e9e] rounded relative overflow-hidden">
         <Image
           src="/calabresa.jpeg"
           alt="pizza de calabresa"

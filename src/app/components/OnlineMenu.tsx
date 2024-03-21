@@ -5,7 +5,7 @@ export const OnlineMenu = () => {
     <div className="w-full">
       <div className="w-full xl:w-[50%] bg-secondary text-[white] p-[48px]">
         <div className="flex gap-[28px] items-center justify-center xl:justify-end">
-          <div className="w-[55px] h-[55px] relative">
+          <div className="w-[55px] min-w-[55px] h-[55px] relative">
             <Image src="/icons/chef.png" alt="chef icon" fill />
           </div>
           <div>
@@ -14,7 +14,7 @@ export const OnlineMenu = () => {
               Clique e peça sua pizza com fermentação natural
             </p>
           </div>
-          <div className="w-[30px] h-[30px] relative">
+          <div className="w-[30px] min-w-[30px] h-[30px] relative">
             <Image src="/icons/arrowRight.png" alt="chef icon" fill />
           </div>
         </div>
@@ -28,7 +28,7 @@ export const OnlineMenu = () => {
             </p>
             <div className="mt-[32px] flex flex-col gap-[32px] items-start">
               <div className="flex gap-[28px] items-center justify-end">
-                <div className="w-[55px] h-[55px] relative">
+                <div className="w-[55px] min-w-[55px]  h-[55px] relative">
                   <Image src="/icons/oven.png" alt="chef icon" fill />
                 </div>
                 <div>
@@ -41,7 +41,7 @@ export const OnlineMenu = () => {
                 </div>
               </div>
               <div className="flex gap-[28px] items-center justify-end">
-                <div className="w-[55px] h-[55px] relative">
+                <div className="w-[55px] min-w-[55px] h-[55px] relative">
                   <Image src="/icons/star.png" alt="chef icon" fill />
                 </div>
                 <div>
