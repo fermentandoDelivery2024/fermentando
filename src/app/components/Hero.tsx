@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { menuOnline } from "../constants/links";
 
 export const Hero = () => {
   return (
-    <div className="flex justify-between items-center gap-[64px] xl:max-w-[1080px] py-[32px] relative flex-col-reverse xl:flex-row">
+    <div id="start" className="flex justify-between items-center gap-[64px] xl:max-w-[1080px] py-[32px] relative flex-col-reverse xl:flex-row">
       <div className="text-text px-[32px] xl:px-0">
         <h1 className="text-[32px] xl:text-[52px] font-bold font-mono">
           Pizza com fermentação natural no aconchego da sua casa!
@@ -18,7 +19,8 @@ export const Hero = () => {
           <button>
             <Link
               className="bg-text text-[white] p-[16px] flex gap-[16px] rounded"
-              href="#"
+              href={menuOnline}
+              target="_blank"
             >
               <div>Peça Agora</div>
               <div className="font-bold">R$ 59,90</div>

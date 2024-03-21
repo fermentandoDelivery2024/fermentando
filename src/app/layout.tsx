@@ -13,7 +13,8 @@ const petitFont = localFont({
 
 export const metadata: Metadata = {
   title: "Fermentando Delivery",
-  description: "",
+  description:
+    "Experimente nossas pizzas de fermentação natural feitas com ingredientes frescos e de qualidade para um sabor único e complexo, além de serem leves e fáceis de digerir devido a fermentação natural.",
 };
 
 export default function RootLayout({
@@ -22,7 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable} ${petitFont.variable}`}>
+    <html
+      lang="en"
+      className={`${raleway.variable} ${petitFont.variable} scroll-smooth`}
+    >
       <body>{children}</body>
     </html>
   );

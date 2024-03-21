@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { menuOnline } from "../constants/links";
 
 export const Delivery = () => {
   return (
@@ -32,19 +33,20 @@ export const Delivery = () => {
           <button className="w-[50%] mx-auto">
             <Link
               className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
-              href="#"
+              href={menuOnline}
+              target="_blank"
             >
               Cardápio Online
             </Link>
           </button>
         </div>
-        <div className="w-[180px] h-[180px] absolute left-[-220px] bottom-[-80px]">
+        <div className="w-[180px] h-[180px] absolute xl:left-[-220px] xl:bottom-[-80px] bottom-[320px] left-0">
           <Image alt="queijo" src="/cheese.png" fill />
         </div>
-        <div className="w-[220px] h-[220px] absolute right-[-220px] top-[-60px]">
+        <div className="w-[220px] h-[220px] absolute xl:right-[-220px] xl:top-[-60px] bottom-[860px] right-[-80px]">
           <Image alt="queijo" src="/tomatoe.png" fill />
         </div>
-        <div className="w-[120px] h-[120px] absolute right-[-220px] bottom-[-30px]">
+        <div className="w-[120px] h-[120px] absolute xl:right-[-220px] xl:bottom-[-30px] bottom-[460px] right-[-40px] rotate-45">
           <Image alt="queijo" src="/eggplant.png" fill />
         </div>
       </div>

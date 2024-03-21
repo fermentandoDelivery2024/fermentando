@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { menuOnline, whatsappLink } from "../constants/links";
 
 export const HealthQuality = () => {
   return (
@@ -13,7 +14,15 @@ export const HealthQuality = () => {
           style={{ objectFit: "cover" }}
         />
       </div>
-      <div className="text-text px-[32px] xl:px-0">
+      <div className="text-text px-[32px] xl:px-0 relative">
+        <div className="w-[143px] h-[75px] absolute top-[-60px] right-[-40px] xl:hidden rotate-180">
+          <Image
+            src="/detalhe-bolinhas.png"
+            alt="bolinhas"
+            fill
+            style={{ objectFit: "contain" }}
+          />
+        </div>
         <h2 className="text-[32px] xl:text-[50px] font-bold font-mono">
           A melhor qualidade também para sua saúde!
         </h2>
@@ -30,7 +39,8 @@ export const HealthQuality = () => {
           <button className="w-[80%] xl:w-[50%]">
             <Link
               className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
-              href="#"
+              href={menuOnline}
+              target="_blank"
             >
               Cardápio Online
             </Link>
@@ -38,7 +48,8 @@ export const HealthQuality = () => {
           <button className="w-[80%] xl:w-[50%]">
             <Link
               className="bg-[transparent] text-text p-[16px] flex gap-[16px] rounded justify-center border-text border-solid border-[1px]"
-              href="#"
+              href={whatsappLink}
+              target="_blank"
             >
               Nos chame pelo Whatsapp
             </Link>

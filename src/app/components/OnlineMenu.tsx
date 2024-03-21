@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { menuOnline } from "../constants/links";
 
 export const OnlineMenu = () => {
   return (
@@ -14,9 +16,13 @@ export const OnlineMenu = () => {
               Clique e peça sua pizza com fermentação natural
             </p>
           </div>
-          <div className="w-[30px] min-w-[30px] h-[30px] relative">
+          <Link
+            href={menuOnline}
+            className="w-[30px] min-w-[30px] h-[30px] relative"
+            target="_blank"
+          >
             <Image src="/icons/arrowRight.png" alt="chef icon" fill />
-          </div>
+          </Link>
         </div>
       </div>
       <div className="w-full xl:w-[50%] bg-[white] text-text p-[48px] flex justify-center xl:justify-end">

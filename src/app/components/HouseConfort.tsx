@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { menuOnline, whatsappLink } from "../constants/links";
 
 export const HouseConfort = () => {
   return (
@@ -21,7 +22,8 @@ export const HouseConfort = () => {
                 <button className="w-[80%] xl:w-[50%]">
                   <Link
                     className="bg-[white] text-text p-[16px] flex gap-[16px] rounded justify-center"
-                    href="#"
+                    href={menuOnline}
+                    target="_blank"
                   >
                     Cardápio Online
                   </Link>
@@ -29,7 +31,8 @@ export const HouseConfort = () => {
                 <button className="w-[80%] xl:w-[50%]">
                   <Link
                     className="bg-[transparent] text-[white] p-[16px] flex gap-[16px] rounded justify-center border-[white] border-solid border-[1px]"
-                    href="#"
+                    href={whatsappLink}
+                    target="_blank"
                   >
                     Nos chame pelo Whatsapp
                   </Link>

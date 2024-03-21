@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { menuOnline } from "../constants/links";
 
 export const Header = () => {
   const menuItems = [
-    { name: "Sobre Nós", link: "" },
-    { name: "Contato", link: "" },
+    { name: "Início", link: "#start" },
+    { name: "Sobre Nós", link: "#about" },
+    { name: "Contato", link: "#contact" },
   ];
   return (
     <header>
@@ -30,6 +32,18 @@ export const Header = () => {
             Cardápio Online
           </Link>
         </button>
+        <Link
+          href={menuOnline}
+          className="w-[32px] h-[32px] relative md:hidden"
+        >
+          <Image
+            fill
+            src="/icons/menu.png"
+            alt="logo"
+            style={{ objectFit: "contain" }}
+            quality={100}
+          />
+        </Link>
       </div>
     </header>
   );

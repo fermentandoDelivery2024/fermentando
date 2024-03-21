@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { menuOnline, whatsappLink } from "../constants/links";
 
 const PizzaCard = ({
   title,
@@ -35,13 +36,13 @@ const PizzaCard = ({
           </div>
         </div>
       </div>
-      <div className="p-[32px]">
+      <div className="p-[16px] xl:p-[32px]">
         <span className="text-[32px] font-mono">{title}</span>
         <p className="text-[16px]">
           Massa feita de: Trigo, água, açúcar, sal, óleo e só!
         </p>
         <p className="text-[16px] font-bold mt-[16px]">Recheada com:</p>
-        <div className="grid grid-cols-2 grid-rows-2 grid-flow-col">
+        <div className="grid grid-cols-2 grid-rows-3 grid-flow-col">
           {igredients.map((item) => (
             <span key={item}>{item}</span>
           ))}
@@ -53,7 +54,7 @@ const PizzaCard = ({
 
 export const Flavours = () => {
   return (
-    <div className="max-w-[1080px] mx-auto mt-[64px] flex flex-col-reverse xl:flex-row gap-[65px] w-full px-[32px]">
+    <div className="max-w-[1080px] mx-auto mt-[64px] flex flex-col-reverse xl:flex-row gap-[65px] w-full px-[32px] relative">
       <div className="xl:hidden">
         <p className="text-[16px] xl:text-[20px] xl:mt-[16px]">
           Experimente as pizzas artesanais escolhidas pra você, feitas com
@@ -65,7 +66,8 @@ export const Flavours = () => {
           <button className="w-[80%]">
             <Link
               className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
-              href="#"
+              href={menuOnline}
+              target="_blank"
             >
               Cardápio Online
             </Link>
@@ -73,7 +75,8 @@ export const Flavours = () => {
           <button className="w-[80%]">
             <Link
               className="bg-[transparent] text-text p-[16px] flex gap-[16px] rounded justify-center border-text border-solid border-[1px]"
-              href="#"
+              href={whatsappLink}
+              target="_blank"
             >
               Nos chame pelo Whatsapp
             </Link>
@@ -88,7 +91,7 @@ export const Flavours = () => {
             text="white"
             bg="#51734E"
             price="59,99"
-            igredients={["Calabresa", "Queijo"]}
+            igredients={["Calabresa", "Mussarela"]}
           />
           <div className="w-[143px] h-[112px] relative mt-[32px] ml-auto rotate-180 hidden xl:inline-block">
             <Image
@@ -106,7 +109,14 @@ export const Flavours = () => {
             text="#3A1C36"
             bg="white"
             price="59,99"
-            igredients={["Carne", "Queijo"]}
+            igredients={[
+              "Carne moída",
+              "Mussarela",
+              "Cheddar",
+              "Catupiry",
+              "Pimentões",
+              "Pimenta biquinho",
+            ]}
           />
         </div>
       </div>
@@ -126,7 +136,8 @@ export const Flavours = () => {
               <button className="w-[50%]">
                 <Link
                   className="bg-text text-[white] p-[16px] flex gap-[16px] rounded justify-center"
-                  href="#"
+                  href={menuOnline}
+                  target="_blank"
                 >
                   Cardápio Online
                 </Link>
@@ -134,7 +145,8 @@ export const Flavours = () => {
               <button className="w-[50%]">
                 <Link
                   className="bg-[transparent] text-text p-[16px] flex gap-[16px] rounded justify-center border-text border-solid border-[1px]"
-                  href="#"
+                  href={whatsappLink}
+                  target="_blank"
                 >
                   Nos chame pelo Whatsapp
                 </Link>
@@ -142,6 +154,9 @@ export const Flavours = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-[115px] h-[156px] absolute top-0 right-[-70px]">
+        <Image src="/wheat.png" fill alt="trigo" />
       </div>
     </div>
   );
