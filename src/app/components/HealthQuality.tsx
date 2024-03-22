@@ -8,7 +8,7 @@ export const HealthQuality = () => {
     <div className="flex justify-between items-center gap-[64px] py-[60px] xl:py-[120px] xl:max-w-[1080px] flex-col xl:flex-row">
       <div className="w-full xl:min-w-[510px] xl:h-[440px] h-[360px] bg-[#9e9e9e] rounded relative overflow-hidden">
         <Image
-          src="/health.jpeg"
+          src="/health.jpg"
           alt="pizza"
           fill
           style={{ objectFit: "cover" }}
