@@ -25,7 +25,7 @@ export const About = () => {
         <div className="w-full xl:w-auto xl:min-w-[440px] h-[440px] xl:bg-main rounded relative">
           <div className="w-full h-full rounded overflow-hidden xl:absolute xl:top-[-20px] xl:right-[-20px]">
             <Image
-              src="/health.jpeg"
+              src="/health.jpg"
               alt="pizza"
               fill
               style={{ objectFit: "cover" }}

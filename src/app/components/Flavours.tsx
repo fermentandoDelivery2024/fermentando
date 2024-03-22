@@ -86,11 +86,11 @@ export const Flavours = () => {
       <div className="w-full xl:w-[50%] flex gap-[32px] flex-col xl:flex-row justify-center">
         <div className="mr-[60px] sm:mr-0 mb-[-60px] xl:mb-0">
           <PizzaCard
-            src="/calabresa.jpeg"
+            src="/calabresa-02.jpeg"
             title="Calabresa"
             text="white"
             bg="#51734E"
-            price="59,99"
+            price="59,95"
             igredients={["Calabresa", "Mussarela"]}
           />
           <div className="w-[143px] h-[112px] relative mt-[32px] ml-auto rotate-180 hidden xl:inline-block">
@@ -104,11 +104,11 @@ export const Flavours = () => {
         </div>
         <div className="ml-[60px] md:ml-[128px] xl:ml-0 flex">
           <PizzaCard
-            src="/onlineMenu.jpg"
+            src="/carnaxide.jpg"
             title="Carnaxide"
             text="#3A1C36"
             bg="white"
-            price="59,99"
+            price="69,95"
             igredients={[
               "Carne moída",
               "Mussarela",
