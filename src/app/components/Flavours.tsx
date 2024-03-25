@@ -105,7 +105,7 @@ export const Flavours = () => {
         <div className="ml-[60px] md:ml-[128px] xl:ml-0 flex">
           <PizzaCard
             src="/carnaxide.jpg"
-            title="Carnaxide"
+            title="Monsaraz"
             text="#3A1C36"
             bg="white"
             price="69,95"
