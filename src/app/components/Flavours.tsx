@@ -39,7 +39,8 @@ const PizzaCard = ({
       <div className="p-[16px] xl:p-[32px]">
         <span className="text-[32px] font-mono">{title}</span>
         <p className="text-[16px]">
-          Massa feita de: Trigo, água, açúcar, sal, óleo e só!
+          Massa feita artesanal, feita com: farinha 0.0, fermento natural e
+          fermentação longa!
         </p>
         <p className="text-[16px] font-bold mt-[16px]">Recheada com:</p>
         <div className="grid grid-cols-2 grid-rows-3 grid-flow-col">
